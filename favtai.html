@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favour Taiwo | Geospatial Data Scientist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --primary-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+
+        /* Header & Navigation */
+        header { background-color: var(--surface-color); padding: 2rem 5%; text-align: center; border-bottom: 2px solid var(--primary-color); }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--text-muted); font-size: 1.2rem; margin-bottom: 1rem; }
+        
+        .header-actions { display: flex; justify-content: center; gap: 1.5rem; align-items: center; margin-bottom: 1.5rem; }
+        .social-links a { color: var(--text-main); font-size: 1.5rem; transition: color 0.3s; }
+        .social-links a:hover { color: var(--primary-color); }
+        
+        /* The CV Download Button */
+        .btn-download { background-color: var(--primary-color); color: #0f172a; padding: 0.5rem 1.2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-download:hover { background-color: #7dd3fc; }
+
+        nav { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .tab-btn { background: transparent; border: 2px solid var(--text-muted); color: var(--text-muted); padding: 0.5rem 1.5rem; border-radius: 20px; cursor: pointer; font-size: 1rem; transition: all 0.3s; }
+        .tab-btn:hover, .tab-btn.active { border-color: var(--primary-color); color: var(--primary-color); }
+
+        /* Main Content */
+        main { max-width: 1000px; margin: 3rem auto; padding: 0 5%; }
+        .tab-content { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Home Section */
+        .bio-card { background: var(--surface-color); padding: 2rem; border-radius: 10px; margin-bottom: 2rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+        .profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary-color); flex-shrink: 0; }
+        .bio-text { flex: 1; min-width: 300px; }
+        
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 1rem; }
+        .skill-tag { background: rgba(56, 189, 248, 0.1); color: var(--primary-color); padding: 0.5rem; text-align: center; border-radius: 5px; border: 1px solid rgba(56, 189, 248, 0.3); font-size: 0.9rem;}
+
+        /* Grids and Cards */
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--surface-color); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary-color); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-3px); }
+        .card h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
+        .card .date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; display: block; font-style: italic;}
+        .card ul { margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted); }
+        .card li { margin-bottom: 0.5rem; }
+
+        /* Web Apps Sub-List Styling */
+        .app-links-list { list-style: none !important; margin-left: 0 !important; margin-top: 1rem !important; }
+        .app-links-list li { margin-bottom: 0.8rem !important; }
+        .app-links-list a { color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: rgba(255,255,255,0.05); border-radius: 5px; transition: all 0.3s; }
+        .app-links-list a:hover { background: rgba(56, 189, 248, 0.1); color: var(--primary-color); transform: translateX(5px); }
+        .app-links-list i { color: var(--primary-color); }
+
+        /* Tables for Certs */
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--text-muted); }
+        th { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Favour Taiwo</h1>
+        <p class="subtitle">Geospatial Scientist | Data Engineer | Land Surveyor</p>
+        
+        <div class="header-actions">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/favour-taiwo-57232023a/" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                
+                <a href="https://github.com/favtai" target="_blank" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                
+                <a href="mailto:Favtai11@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <a href="Favour_Taiwo_CV.pdf" download class="btn-download"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+
+        <nav>
+            <button class="tab-btn active" onclick="openTab('home')">Home</button>
+            <button class="tab-btn" onclick="openTab('experience')">Experience</button>
+            <button class="tab-btn" onclick="openTab('projects')">Projects</button>
+            <button class="tab-btn" onclick="openTab('education')">Education & Certs</button>
+            <button class="tab-btn" onclick="openTab('leadership')">Leadership</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="bio-card">
+                <img src="profile.jpg" alt="Favour Taiwo" class="profile-pic" onerror="this.src='https://via.placeholder.com/150?text=Photo'">
+                <div class="bio-text">
+                    <h2>About Me</h2>
+                    <br>
+                    <p>I am an enthusiastic geospatial scientist and geomatician currently pursuing my B.Sc. in Surveying & Geo-informatics at the University of Lagos. I bridge the gap between traditional field surveying and modern software engineering, leveraging programming and data science to drive impactful projects in the geospatial industry.</p>
+                </div>
+            </div>
+            
+            <div class="card" style="border-left: none;">
+                <h3 style="text-align: center; margin-bottom: 1rem;">Hardware, Software & Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">Python (Data Science, Streamlit)</div>
+                    <div class="skill-tag">QGIS & ArcGIS Pro</div>
+                    <div class="skill-tag">Google Earth Engine</div>
+                    <div class="skill-tag">PostgreSQL</div>
+                    <div class="skill-tag">MATLAB</div>
+                    <div class="skill-tag">AutoCAD & Surfer</div>
+                    <div class="skill-tag">DGPS (Trimble, Stonex)</div>
+                    <div class="skill-tag">Total Stations & Levels</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="tab-content">
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>Polaris Digitech, Lagos</h3>
+                    <span class="date">Intern | May 2025 - Oct 2025</span>
+                    <ul>
+                        <li>Developed a geospatial cadastral information system utilizing QGIS and PostgreSQL.</li>
+                        <li>Programmed Python helper functions for an Address Management System to optimize data workflows.</li>
+                        <li>Assisted in executing precise cadastral and topographic surveys.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Aj-geokons Engineering Services, Lagos</h3>
+                    <span class="date">Assistant Surveyor (Contract) | Dec 2020 - Mar 2025</span>
+                    <ul>
+                        <li>Led a team of five in the re-establishment and topographic survey of a 1,500-hectare plot in Abuja.</li>
+                        <li>Spearheaded topographic and dispute survey for a 170-hectare plot in Abuja.</li>
+                        <li>Collaborated on the survey and design of a 9.2km road in Kwara State.</li>
+                        <li>Drafted comprehensive street maps for a community in Ibadan.</li>
+                        <li>Subdivision survey for an agricultural plot in iwo, Osun State.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Duravil Engineering Limited, Lagos</h3>
+                    <span class="date">Survey Assistant | Dec 2019 - Mar 2020</span>
+                    <ul>
+                        <li>Participated actively in the construction layout of two seaside warehouses for GMT Haulage.</li>
+                        <li>Directed operations as Foreman for the route survey of the connecting road serving both warehouses.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Osun State Office of Surveyor General</h3>
+                    <span class="date">Industrial Trainee | Aug 2018 - Dec 2018</span>
+                    <ul>
+                        <li>Executed control extension, perimeter surveying, and subdivision of government plots.</li>
+                        <li>Applied AutoCAD software for precise surveying, drafting, and documentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <div class="grid-layout">
+                
+                <div class="card">
+                    <h3>Geospatial Web Applications</h3>
+                    <p>Designed, developed, and deployed interactive data tools using Python (Streamlit & NiceGUI). Click to view live apps:</p>
+                    <ul class="app-links-list">
+                        <li><a href="https://huggingface.co/spaces/Favtai/Surveying_Calculation_Suite" target="_blank"><i class="fas fa-globe"></i> Surveyor Suite (Docker/NiceGUI)</a></li>
+                        <li><a href="https://coordinateconverter.streamlit.app/" target="_blank"><i class="fas fa-map-marker-alt"></i> Coordinate Converter</a></li>
+                        <li><a href="https://batchgeocoder.streamlit.app/" target="_blank"><i class="fas fa-search-location"></i> Geocoder Tool</a></li>
+                        <li><a href="https://levellingcomputation.streamlit.app/" target="_blank"><i class="fas fa-ruler-combined"></i> Levelling Computer</a></li>
+                        <li><a href="https://corslocator.streamlit.app" target="_blank"><i class="fas fa-satellite-dish"></i> CORS Locator</a></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Geospatial Analysis (EV Stations)</h3>
+                    <p>Carried out a multicriteria analysis for priority siting of EV Stations in Nigeria, resulting in a comprehensive technical report.</p>
+                </div>
+                <div class="card">
+                    <h3>3D Spatial Modeling</h3>
+                    <p>Created a detailed 3D spatial model of the Faculty of Engineering at the University of Lagos.</p>
+                </div>
+                <div class="card">
+                    <h3>Analytical Calculators</h3>
+                    <p>Programmed an optimal crop decision application using MATLAB and built a traverse calculator leveraging MATLAB and Visual Basic.</p>
+                </div>
+                <div class="card">
+                    <h3>Coordinate Accuracy Analysis</h3>
+                    <p>Conducted a practical comparative analysis of coordinate accuracy across DGPS, Google Earth, and handheld GPS devices.</p>
+                </div>
+                <div class="card">
+                    <h3>Academic Research</h3>
+                    <p>Reviewed and presented geospatial research papers focusing on spatio-temporal land use and surveying innovations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="tab-content">
+            <div class="grid-layout" style="margin-bottom: 2rem;">
+                <div class="card">
+                    <h3>University of Lagos</h3>
+                    <span class="date">B.Sc. in Surveying & Geo-informatics | Nov 2020 - Present</span>
+                    <p><strong>Coursework:</strong> Hydrography, G.I.S., Photogrammetry, Geodesy, and Cadastral Survey.</p>
+                </div>
+                <div class="card">
+                    <h3>Federal Polytechnic Ede</h3>
+                    <span class="date">N.D. Surveying & Geo-informatics | Nov 2017 - Dec 2019</span>
+                    <p><strong>Graduated with Distinction </strong></p>
+                    <ul>
+                        <li>Graduation Project: 4.6km route survey and design.</li>
+                        <li>Award for Academic Excellence from NISGS (2019).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="border-left: none;">
+                <h3>Certifications</h3>
+                <table>
+                    <tr>
+                        <th>Certification</th>
+                        <th>Institution / Year</th>
+                    </tr>
+                    <tr><td>YouthMappers Academy Courses 1 - 13</td><td>YouthMappers (2025)</td></tr>
+                    <tr><td>Machine Learning</td><td>ECX (2025)</td></tr>
+                    <tr><td>MATLAB Onramp</td><td>Mathworks (2024)</td></tr>
+                    <tr><td>McKinsey Forward Program</td><td>McKinsey (2024)</td></tr>
+                    <tr><td>Going Places with Spatial Analysis</td><td>ESRI (2023)</td></tr>
+                    <tr><td>Introduction to Data Analytics</td><td>SkillUP (2023)</td></tr>
+                    <tr><td>Microsoft Excel from Basic to Advanced</td><td>Udemy (2023)</td></tr>
+                    <tr><td>Spatial Data Science: The New Frontier</td><td>ESRI (2022)</td></tr>
+                    <tr><td>Soft Skills Training</td><td>Jobberman (2022)</td></tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="leadership" class="tab-content">
+            <div class="grid-layout">
+                <div class="card">
+                    <h3>YouthMappers UNILAG</h3>
+                    <span class="date">President 2025/2026 (Formerly Vice President)</span>
+                    <p>Organizing technical workshops and leading major community mapping initiatives for humanitarian causes.</p>
+                </div>
+                <div class="card">
+                    <h3>Young Surveyors Network (YSN)</h3>
+                    <span class="date">Active Member & Volunteer</span>
+                    <ul>
+                        <li>Contributing Member of the International Relations Committee.</li>
+                        <li>Contributing Member of the Mentorship, IT, and Employment Committee.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Mappers Sphere</h3>
+                    <span class="date">Community & Event Coordinator</span>
+                    <p>Facilitating geospatial events and peer mentorship within the mapping community.</p>
+                </div>
+                <div class="card">
+                    <h3>Global Mapping & Volunteering</h3>
+                    <span class="date">Active Contributor</span>
+                    <ul>
+                        <li>Contributor to UNMappers and OpenStreetMap (OSM).</li>
+                        <li>UNDEF Safe School Ambassador.</li>
+                        <li>Volunteer for Mac-Salve Sickle Foundation, Maritime Forum, and Unilever FUCAP Program.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function openTab(tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
